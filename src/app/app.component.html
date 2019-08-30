@@ -1,0 +1,26 @@
+<div class="container-fluid">
+<div class="row justify-content-center">
+  <div class="col-sm-12">
+    <div class="row justify-content-center">
+      <h4 class="display-4">Welcome to My Awesome App!</h4>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col">  
+      <input [(ngModel)]="name" />
+        <p>My name is {{ name }}</p>
+        <p>Today's date is {{objDate | date :'short'}}</p>
+        <p>Today's date is {{strDate | date :'short'}}</p>
+        <p>The total value is USD is {{ curr | currency:"₹"}}</p>
+        <input [(ngModel)] = "num" />
+        <p>Currency in Dollars is: {{ num | curConverter:'D' }}</p>
+        <p>Currency in Dollars is: {{ num | curConverter:'E' }}</p>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+      <input [(ngModel)]="temp" placeholder="Provide temperate in Celsius">
+      <p>Temperature in Fahrenheit is: {{ temp | tempConv:'C' }}</p>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
